@@ -1,8 +1,8 @@
 site_name: Plataformas, Microsserviços e APIs
-site_author: Nina Savoy de Sá
-site_url: https://giuvallente.github.io/documentation
-repo_url: https://github.com/giuvallente/documentation
-repo_name: giuvallente/documentation
+site_author: Giulia Gomes Vallente
+site_url: https://ninasavoy.github.io/documentation
+repo_url: https://github.com/ninasavoy/docs
+repo_name: ninasavoy/docs
 
 theme:
   name: material
@@ -75,6 +75,4 @@ nav:
   - Home: index.md
   - Individual: 
     - Exchange API: ./exchange/main.md
-    - Product: ./exchange/main.md
-    - Order: ./exchange/main.md
-    - Exchange API: ./exchange/main.md
+    - Product API: ./product/main.md
