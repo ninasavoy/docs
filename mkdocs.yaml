@@ -74,5 +74,5 @@ plugins:
 nav:
   - Home: index.md
   - Individual: 
-    - Exchange API: exchange/main.md
+    - Exchange API: exchange.md
     - Product API: product/main.md
