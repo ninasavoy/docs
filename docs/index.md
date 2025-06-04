@@ -22,3 +22,7 @@ Bem-vindo à documentação do projeto de Plataformas, Microsserviços e APIs fe
 
 ## Execução
 
+### 1. Compile e instale com Maven
+
+```bash
+./mvnw clean install
