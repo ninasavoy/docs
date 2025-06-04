@@ -1,8 +1,8 @@
-# order
+# Order
 
 O Order e o Order Services são microsserviços da loja, desenvolvidos em Java. Utilizamos o Jenkins, garantindo que os serviços sejam testados e implantados de forma contínua. Também configuramos o Minikube para simular um cluster Kubernetes local, permitindo testar os deployments dos microsserviços em um ambiente semelhante ao de produção.
 
-Exemplo de uso:
+A API possui o seguinte endpoint:
 
 !!! info "POST /order/"
 
@@ -62,23 +62,38 @@ A API está disponível nos seguintes repositórios: [order](https://github.com/
 
 ## Estrutura do Projeto
 
-```
-src/main/
-    java/store/order/
-    ├── order.java
-    ├── etc.java
-    resouces/
-        db/
-            V2025.02.21.001__create_schema_product.sql
-            
-        application.yaml
-Dockerfile
-Jenkinsfile
-pom.xml
-```
+#### Order Service
 
 ```
-k8s
+order-service/
+├── k8s/
+│   ├── deployment.yaml
+│   └── service.yaml
+├── src/main/
+│   ├── java/store/order/
+│   │   ├── Item.java
+│   │   ├── ItemModel.java
+│   │   ├── ItemParser.java
+│   │   ├── ItemRepository.java
+│   │   ├── Order.java
+│   │   ├── OrderApplication.java
+│   │   ├── OrderModel.java
+│   │   ├── OrderParser.java
+│   │   ├── OrderRepository.java
+│   │   ├── OrderResource.java
+│   │   └── OrderService.java
+│   └── resources/
+│       ├── db/migration/
+│       │   ├── V2025.02.21.001__create_schema_order.sql
+│       │   └── V2025.02.21.002__create_table_order.sql
+│       └── application.yaml
+├── Jenkinsfile
+└── pom.xml
+```
+
+#### Order
+
+```
 src/main/java/store/order
 ├── ItemIn.java
 ├── ItemOut.java
@@ -91,12 +106,42 @@ pom.xml
 
 ## Código-fonte
 
-=== "orderX.java"
-    ``` { .python .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/order/src/main/java/store/order/orderX.java"
-    ```
+### Interface
 
-=== "Dockerfile"
-    ``` { .dockerfile .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/order-service/Dockerfile"
-    ```
+=== "ItemIn.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order/main/src/main/java/store/order/ItemIn.java"
+
+=== "ItemOut.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order/main/src/main/java/store/order/ItemOut.java"
+
+=== "OrderController.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order/main/src/main/java/store/order/OrderController.java"
+
+=== "OrderIn.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order/main/src/main/java/store/order/OrderIn.java"    
+
+=== "OrderOut.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order/main/src/main/java/store/order/OrderOut.java"
+
+=== "pom.xml" { .xml .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order/main/pom.xml"
+
+### Implementação
+
+=== "Item.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order-service/main/src/main/java/store/order/Item.java"
+
+=== "ItemModel.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order-service/main/src/main/java/store/order/ItemModel.java"
+
+=== "ItemParser.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order-service/main/src/main/java/store/order/ItemParser.java"
+
+=== "ItemRepository.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order-service/main/src/main/java/store/order/ItemRepository.java"
+
+=== "Order.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order-service/main/src/main/java/store/order/Order.java"
+
+=== "OrderApplication.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order-service/main/src/main/java/store/order/OrderApplication.java"    
+
+=== "OrderModel.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order-service/main/src/main/java/store/order/OrderModel.java"
+
+=== "OrderParser.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order-service/main/src/main/java/store/order/OrderParser.java"
+
+=== "OrderRepository.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order-service/main/src/main/java/store/order/OrderRepository.java"
+
+=== "OrderResource.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order-service/main/src/main/java/store/order/OrderResource.java"
+
+=== "OrderService.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order-service/main/src/main/java/store/order/OrderService.java"
+
+=== "pom.xml" { .xml .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/order-service/main/pom.xml"

@@ -1,6 +1,6 @@
 # Product
 
-O Product e o Product Services são microsserviços da loja, desenvolvidos em Java. Utilizamos o Jenkins, garantindo que os serviços sejam testados e implantados de forma contínua. Também configuramos o Minikube para simular um cluster Kubernetes local, permitindo testar os deployments dos microsserviços em um ambiente semelhante ao de produção.
+O Product e o Product Services são microsserviços da loja, desenvolvidos em Java utilizando o framework SpringBoot. Utilizamos, eventualmente, o Jenkins, garantindo que os serviços sejam testados e implantados de forma contínua. Também configuramos o Minikube para simular um cluster Kubernetes local, permitindo testar os deployments dos microsserviços em um ambiente semelhante ao de produção.
 
 A API possui o seguinte endpoint:
 
@@ -42,21 +42,35 @@ A API está disponível nos seguintes repositórios: [Product](https://github.co
 
 ## Estrutura do Projeto
 
-```
-src/main/
-    java/store/product/
-    ├── Product.java
-    ├── etc.java
-    resouces/
-        db/
-        application.yaml
-Dockerfile
-Jenkinsfile
-pom.xml
-```
+#### Product Service
 
 ```
-k8s
+product-service/
+├── k8s/
+│   ├── deployment.yaml
+│   └── service.yaml
+├── src/main/
+│   ├── java/store/product/
+│   │   ├── Product.java
+│   │   ├── ProductApplication.java
+│   │   ├── ProductModel.java
+│   │   ├── ProductParser.java
+│   │   ├── ProductRepository.java
+│   │   ├── ProductResource.java
+│   │   └── ProductService.java
+│   └── resources/
+│       ├── db/migration/
+│       │   ├── V2025.02.21.001__create_schema_product.sql
+│       │   └── V2025.02.21.002__create_table_product.sql
+│       └── application.yaml
+├── Jenkinsfile
+└── pom.xml
+
+```
+
+#### Product
+
+```
 src/main/java/store/product
 ├── ProductController.java
 ├── ProductIn.java
@@ -67,12 +81,30 @@ pom.xml
 
 ## Código-fonte
 
-=== "ProductX.java"
-    ``` { .python .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/product/src/main/java/store/product/ProductX.java"
-    ```
+### Interface
 
-=== "Dockerfile"
-    ``` { .dockerfile .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/product-service/Dockerfile"
-    ```
+=== "ProductController.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/product/main/src/main/java/store/product/ProductController.java"
+
+=== "ProductIn.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/product/main/src/main/java/store/product/ProductIn.java"    
+
+=== "ProductOut.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/product/main/src/main/java/store/product/ProductOut.java"
+
+=== "pom.xml" { .xml .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/product/main/pom.xml"
+
+### Implemenção
+
+=== "Product.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/product-service/main/src/main/java/store/product/Product.java"
+
+=== "ProductApplication.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/product-service/main/src/main/java/store/product/ProductApplication.java"    
+
+=== "ProductModel.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/product-service/main/src/main/java/store/product/ProductModel.java"
+
+=== "ProductParser.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/product-service/main/src/main/java/store/product/ProductParser.java"
+
+=== "ProductRepository.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/product-service/main/src/main/java/store/product/ProductRepository.java"
+
+=== "ProductResource.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/product-service/main/src/main/java/store/product/ProductResource.java"
+
+=== "ProductService.java" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/product-service/main/src/main/java/store/product/ProductService.java"
+
+=== "pom.xml" { .xml .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/product-service/main/pom.xml"
