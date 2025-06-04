@@ -33,11 +33,6 @@ Dockerfile
 
 ## Código-fonte
 
-=== "main.py"
-    ``` { .python .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/exchange-service/app/main.py"
-    ```
-
 
 === "Dockerfile"
     ``` { .dockerfile .copy .select linenums="1" }
