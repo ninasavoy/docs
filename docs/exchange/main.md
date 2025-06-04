@@ -32,9 +32,11 @@ Dockerfile
 ```
 
 ## Código-fonte
-
-
-=== "Dockerfile"
-    ``` { .dockerfile .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/exchange-service/Dockerfile"
+=== "main.py"
+    ``` { .python .copy .select linenums="1" }
+    --8<-- "https://raw.githubusercontent.com/ninasavoy/exchange-service/app/main.py"
+    ```
+=== "requirements.txt"
+    ``` { .txt .copy .select linenums="1" }
+    --8<-- "https://raw.githubusercontent.com/ninasavoy/exchange-service/app/requirements.txt"    
     ```
