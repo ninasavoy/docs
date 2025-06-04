@@ -26,9 +26,9 @@ Ela fica localizada na pasta dos microsserviços :
 
 ### Jenkinsfile para Interface
 
-=== "Account" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/account/main/Jenkinsfile"
+=== "Account" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/insper.store.account/main/Jenkinsfile"
 
-=== "Auth" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/auth/main/Jenkinsfile"
+=== "Auth" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/insper.store.auth/main/Jenkinsfile"
 
 === "Product" { .java .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/product/main/Jenkinsfile"
 
@@ -36,11 +36,11 @@ Ela fica localizada na pasta dos microsserviços :
 
 ### Jenkinsfile para Implementação
 
-=== "Account Service" { .groovy .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/account-service/main/Jenkinsfile"
+=== "Account Service" { .groovy .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/insper.store.account-service/main/Jenkinsfile"
 
-=== "Auth Service" { .groovy .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/auth-service/main/Jenkinsfile"
+=== "Auth Service" { .groovy .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/insper.store.auth-service/main/Jenkinsfile"
 
-=== "Gateway Service" { .groovy .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/gateway-service/main/Jenkinsfile"
+=== "Gateway Service" { .groovy .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/insper.store.gateway-service/main/Jenkinsfile"
 
 === "Product Service" { .groovy .copy .select linenums="1" } --8<-- "https://raw.githubusercontent.com/ninasavoy/product-service/main/Jenkinsfile"
 

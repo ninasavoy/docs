@@ -4,11 +4,11 @@ Bem-vindo à documentação do projeto de Plataformas, Microsserviços e APIs fe
 
 ## Repositórios
 
-- [Account](https://github.com/ninasavoy/account)
-- [Account Service](https://github.com/ninasavoy/account-service)
-- [Auth](https://github.com/ninasavoy/auth)
-- [Auth Service](https://github.com/ninasavoy/auth-service)
-- [Gateway](https://github.com/ninasavoy/gateway-service)
+- [Account](https://github.com/ninasavoy/insper.store.account)
+- [Account Service](https://github.com/ninasavoy/insper.store.account-service)
+- [Auth](https://github.com/ninasavoy/insper.store.auth)
+- [Auth Service](https://github.com/ninasavoy/insper.store.auth-service)
+- [Gateway](https://github.com/ninasavoy/insper.store.gateway-service)
 - [Exchange](https://github.com/ninasavoy/exchange-service)
 - [Product](https://github.com/ninasavoy/product)
 - [Product Service](https://github.com/ninasavoy/product-service)

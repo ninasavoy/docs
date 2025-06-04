@@ -23,48 +23,48 @@ Os arquivos de configuração do MiniKube são apenas criados nos repositórios 
 
 === "Postgres"
     ``` { .yaml .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/account-service/main/k8s/postgres.yaml"
+    --8<-- "https://raw.githubusercontent.com/ninasavoy/insper.store.account-service/main/k8s/postgres.yaml"
     ```
 
 ### Account Service
 
 === "Deployment"
     ``` { .yaml .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/account-service/main/k8s/deployment.yaml"
+    --8<-- "https://raw.githubusercontent.com/ninasavoy/insper.store.account-service/main/k8s/deployment.yaml"
     ```
 
 === "Service"
     ``` { .yaml .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/account-service/main/k8s/service.yaml"
+    --8<-- "https://raw.githubusercontent.com/ninasavoy/insper.store.account-service/main/k8s/service.yaml"
     ```
 
 ### Auth Service
 
 === "Deployment"
     ``` { .yaml .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/auth-service/main/k8s/deployment.yaml"
+    --8<-- "https://raw.githubusercontent.com/ninasavoy/insper.store.auth-service/main/k8s/deployment.yaml"
     ```
 
 === "Service"
     ``` { .yaml .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/auth-service/main/k8s/service.yaml"
+    --8<-- "https://raw.githubusercontent.com/ninasavoy/insper.store.auth-service/main/k8s/service.yaml"
     ```
 
 === "Secret"
     ``` { .yaml .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/auth-service/main/k8s/secret.yaml"
+    --8<-- "https://raw.githubusercontent.com/ninasavoy/insper.store.auth-service/main/k8s/secret.yaml"
     ```
 
 ### Gateway Service
 
 === "Deployment"
     ``` { .yaml .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/gateway-service/main/k8s/deployment.yaml"
+    --8<-- "https://raw.githubusercontent.com/ninasavoy/insper.store.gateway-service/main/k8s/deployment.yaml"
     ```
 
 === "Service"
     ``` { .yaml .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/gateway-service/main/k8s/service.yaml"
+    --8<-- "https://raw.githubusercontent.com/ninasavoy/insper.store.gateway-service/main/k8s/service.yaml"
     ```
 
 ### Product Service
