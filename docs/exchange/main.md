@@ -39,3 +39,7 @@ Dockerfile
     --8<-- "https://raw.githubusercontent.com/ninasavoy/exchange-service/requirements.txt"    
     ```
 
+=== "Dockerfile"
+    ``` { .dockerfile .copy .select linenums="1" }
+    --8<-- "https://raw.githubusercontent.com/ninasavoy/exchange-service/Dockerfile"
+    ```
