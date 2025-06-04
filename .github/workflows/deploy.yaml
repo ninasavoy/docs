@@ -41,10 +41,19 @@ jobs:
           echo "jenkins/main.md exists:" && ls -la docs/jenkins/main.md || echo "NOT FOUND"
           echo "minikube/main.md exists:" && ls -la docs/minikube/main.md || echo "NOT FOUND"
 
-      - name: Debug - Check mkdocs.yml
+      - name: Debug - Check mkdocs.yml location
         run: |
-          echo "=== mkdocs.yml nav section ==="
-          grep -A 20 "nav:" mkdocs.yml
+          echo "=== Looking for mkdocs.yml ==="
+          find . -name "mkdocs.yml" -type f
+          echo "=== Root directory contents ==="
+          ls -la
+          echo "=== If mkdocs.yml exists in root ==="
+          if [ -f mkdocs.yml ]; then
+            echo "Found mkdocs.yml in root"
+            grep -A 20 "nav:" mkdocs.yml
+          else
+            echo "mkdocs.yml NOT found in root"
+          fi
 
       - name: Setup Python
         uses: actions/setup-python@v4
