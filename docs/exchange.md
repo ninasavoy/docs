@@ -22,8 +22,6 @@ A API possui o seguinte endpoint:
         Response code: 200 (ok)
         ```
 
-A API está disponível no seguinte repositório: [ExchangeAPI](https://github.com/ninasavoy/exchange-service){target="_blank"}.
-
 ## Estrutura do Projeto
 
 ```
@@ -35,17 +33,3 @@ Dockerfile
 
 ## Código-fonte
 
-=== "main.py"
-    ``` { .python .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/exchange-service/app/main.py"
-    ```
-
-=== "requirements.txt"
-    ``` { .txt .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/exchange-service/requirements.txt"    
-    ```
-
-=== "Dockerfile"
-    ``` { .dockerfile .copy .select linenums="1" }
-    --8<-- "https://raw.githubusercontent.com/ninasavoy/exchange-service/Dockerfile"
-    ```
