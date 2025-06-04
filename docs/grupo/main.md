@@ -15,6 +15,9 @@ Neste trabalho, desenvolvemos e implantamos uma aplicação utilizando serviços
 - [Order Service](https://github.com/guikaidei/microservicos-order-service)
 - [Bottlenecks](https://github.com/guikaidei/microservicos-bottleneck)
 
+ou no repositório conjunto:
+- [Final](https://github.com/guikaidei/projeto-pmda-final)
+
 ## Configuração da AWS
 
 A AWS (Amazon Web Services) foi utilizada como provedor de nuvem. Criamos a infraestrutura básica com:
@@ -34,8 +37,6 @@ Utilizamos o Amazon EKS para orquestrar os containers da aplicação. A configur
 - Deploy da aplicação Spring Boot em pods
 
 - Balanceamento de carga com LoadBalancer Service
-
-- Banco de dados com RDS ou DynamoDB
 
 - O EKS garantiu escalabilidade e alta disponibilidade para nossa aplicação.
 

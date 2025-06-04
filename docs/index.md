@@ -19,3 +19,6 @@ Bem-vindo à documentação do projeto de Plataformas, Microsserviços e APIs fe
 ## Vídeos
 - [Individual](https://drive.google.com/file/d/1rsrB5VhUk_JvrWNspz4rLj4K9EcSFFVo/view?usp=sharing)
 - [Grupo]
+
+## Execução
+
